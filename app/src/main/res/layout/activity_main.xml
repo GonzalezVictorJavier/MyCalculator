@@ -9,13 +9,14 @@
     android:orientation="vertical"
 
     >
+
     <TextView
         android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:textSize="48sp"
         android:maxLength="12"
-        />
+        android:textSize="48sp"
+        android:layout_gravity="end"/>
     <!--ROW1-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +58,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperation"
             android:text="/"
             android:layout_marginHorizontal="5dp"
             />
@@ -103,7 +104,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="*"
-            android:onClick="onDigit"
+            android:onClick="onOperation"
             android:layout_marginHorizontal="5dp"
             />
         ></LinearLayout>
@@ -146,7 +147,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperation"
             android:layout_marginHorizontal="5dp"
             />
         ></LinearLayout>
@@ -162,7 +163,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onPoint"
             android:layout_marginHorizontal="5dp"
             />
         <Button
@@ -180,7 +181,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="CLR"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:layout_marginHorizontal="5dp"
             />
         <Button
@@ -189,7 +190,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperation"
             android:layout_marginHorizontal="5dp"
             />
         ></LinearLayout>
@@ -205,7 +206,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="="
-            android:onClick="onDigit"
+            android:onClick="onResult"
             android:layout_marginHorizontal="5dp"
             />
         ></LinearLayout>
