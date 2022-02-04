@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             prefix = "+"
-
         }
         if(tvInputString.contains("+")){
             var splitValue = tvInputString.split("+")
@@ -77,6 +76,10 @@ class MainActivity : AppCompatActivity() {
                     }
                     (findViewById<TextView>(R.id.tvInput)).text = (one.toFloat() / two.toFloat()).toString()
                 }
+        dotFlag = false
+        lastNumeric = true
+        operatorFlag = false
+        firstMinusFlag = false
     }
     fun onOperation(view: android.view.View) {
         if(!operatorFlag && lastNumeric) {
